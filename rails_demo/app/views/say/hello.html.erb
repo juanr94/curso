@@ -1,0 +1,22 @@
+<h1>Say#hello</h1>
+<p>Find me in app/views/say/hello.html.erb</p>
+<h1>Hola mundo desde Ruby on Rails</h1>
+<input type="date" value="2022-10-06">
+<p>
+    It is now <%= @time%>
+</p>
+
+<p>
+    Say <a href="/say/goobye"> Goobye</a>
+</p>
+
+<p>
+    Say <%= link_to "Goobye", say_goobye_path %>
+</p>
+
+<p>
+    Imprime desde una intancia de clase : <%= SayController.new().goobye()%>
+</p>
+
+
+
