@@ -1,0 +1,40 @@
+
+<h1>Books</h1>
+<p id="notice">
+  <%= notice %>
+</p>
+
+<main>
+  <section class="py-1 text-center container">
+    <div class="row py-lg-1">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Libros Disponibles</h1>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <% @books.each do |books| %>
+          <div class="col">
+            <div class="card shadow-sm border-primary">
+                <div class="card-body">
+                  <p class="card-text">
+                    <h3>
+                      <%= books.title %>
+                    </h3>
+                    <span><%= books.categoria %></span>
+                    <br>
+                    <span><%= books.year %></span>
+                  </p>
+                </div>
+            </div>
+          </div>
+          <% end %>
+      </div>
+
+    </div>
+      <%= link_to 'New Book', new_book_path %>
+  </div>
+</main>
